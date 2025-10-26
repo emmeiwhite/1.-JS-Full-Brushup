@@ -20,3 +20,22 @@ console.log(typeof true)
 console.log(typeof 'hi')
 console.log(typeof function () {})
 console.log(typeof {})
+
+// 5. Boolean Types: It is often useful to have values that distinguish only between two possibilities, "yes" and "no" or "on" and "off".
+
+console.log(3 > 5)
+console.log('Abc' > 'efg') // uppercase letters are always considered lower than lowercase letters
+
+console.log(NaN === NaN) // Only JavaScript value not equal to itself
+
+// Ternary operator, undefined and null
+
+console.log(true ? 'Is life a test? true' : 'Someone is false')
+console.log({ age: undefined })
+
+let person = {}
+
+console.log(person)
+
+let doctor = null // No doctor available right now - explicitly defined by the programmer
+let outOfStockItems // The JS Engine decides to keep it as undefined, assuming no value yet

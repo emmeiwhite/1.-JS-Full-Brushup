@@ -106,3 +106,49 @@ So in summary:
 | “Assign a variable” | Give that value a persistent label like `let age = 42;`.    |
 
 You caught a very fine linguistic detail — and this distinction between _literal_ and _binding_ is foundational for thinking clearly about values and variables in JavaScript.
+
+==Q5) Unicode defines more characters than that—about twice as many, at this point. So some characters, such as many emoji, take up two “character positions” in JavaScript strings. Explain more?==
+
+A5) Sure — here’s the short, clear version:
+
+JavaScript stores each character in a string using **16 bits** (2 bytes).  
+That means it can directly represent **65,536 (2¹⁶)** unique characters — enough for most common ones (like Latin, Arabic, etc.).
+
+But **Unicode** (the global character standard) now has **over 100,000 characters**, including emoji, rare symbols, and historical scripts — _more than 65,536_.
+
+So, for characters beyond that limit (like emoji 😊 or flags 🏴‍☠️), JavaScript can’t fit them in one 16-bit unit.  
+Instead, it represents them using **two 16-bit units** — called a _surrogate pair_.
+
+👉 Therefore, such characters count as **two “positions”** in a JS string, even though we see them as **one visible character**.
+
+==Q6) Highlight the distinction between null and undefined?==
+A6) Perfect — you’ve captured Marijn’s intent. To expand _just enough_ for interview clarity:
+
+### 🔹 `undefined`
+
+- **Meaning:** “No value has been assigned.”
+- **Used by JavaScript itself** to indicate _absence by default_.
+  - Example: a declared variable without assignment → `let x; // x is undefined`
+  - Example: a function with no `return` → returns `undefined`.
+
+### 🔹 `null`
+
+- **Meaning:** “Intentional absence of value.”
+- **Used by developers** to explicitly say, “there’s supposed to be a value here, but it’s empty.”
+  - Example: `let user = null; // user exists, but no data yet`
+
+### ⚖️ Key Difference
+
+| Aspect         | `undefined`               | `null`                    |
+| -------------- | ------------------------- | ------------------------- |
+| Who assigns it | JavaScript engine         | You, the programmer       |
+| Meaning        | Missing / not yet defined | Explicitly empty          |
+| Type           | `undefined`               | `object` (a legacy quirk) |
+| Typical use    | Default placeholder       | Intentional placeholder   |
+
+So:
+
+> `undefined` → “nothing _yet_.”  
+> `null` → “nothing _on purpose_.”
+
+That one-liner often impresses interviewers.

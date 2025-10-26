@@ -39,3 +39,10 @@ console.log(person)
 
 let doctor = null // No doctor available right now - explicitly defined by the programmer
 let outOfStockItems // The JS Engine decides to keep it as undefined, assuming no value yet
+
+// Short-Circuit Operator
+console.log(null || 'Emmeiwhite')
+console.log('Reality' || 'Friction')
+
+console.log(true && 'It is the truth')
+console.log(false && 'It is false')

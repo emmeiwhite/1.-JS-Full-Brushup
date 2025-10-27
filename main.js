@@ -46,3 +46,17 @@ console.log('Reality' || 'Friction')
 
 console.log(true && 'It is the truth')
 console.log(false && 'It is false')
+
+/** DAY-2 JavaScript Brushup */
+
+// Binding or Variable: Thus far we have learned to generate values and use operators on the values. Now, we'll see how does a program keep an internal state. How does a program remembers things Insha'Allah
+
+let catchhold = 5 * 5
+console.log(catchhold)
+
+let luigiesDebt = 140 // Defined the binding for the debt that luigi owes me
+luigiesDebt = 140 - 35 // After luigie paid 35$ back, the binding now holds the pending new debt
+
+// Function as value.Piece of program wrapped in a value. Some functions produces "Side Effects" while others produce a value
+
+console.log(Math.max(2, 4, 1, 6, 8))

@@ -46,7 +46,7 @@ In short:
 
 > A video file is data; in JS it becomes a value _through_ an object that defines what can be done with it.
 
-Q4) When author of Eloquent JavaScript , Marijn Haverbeke says about the _value_ “you must merely invoke its name” what does they mean?
+Q4) When author of Eloquent JavaScript , Marijn Haverbeke talks about the _value_ “you must merely invoke its name” what does they mean?
 
 A4) That’s a beautiful and subtle question — and you’re catching a nuance most beginners miss.
 

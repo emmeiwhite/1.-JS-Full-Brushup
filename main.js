@@ -60,3 +60,28 @@ luigiesDebt = 140 - 35 // After luigie paid 35$ back, the binding now holds the 
 // Function as value.Piece of program wrapped in a value. Some functions produces "Side Effects" while others produce a value
 
 console.log(Math.max(2, 4, 1, 6, 8))
+
+// Conditional Statement: Not all statements are straight roads
+/* ---
+let num = Number(prompt('Enter a number'))
+if (!Number.isNaN(num)) {
+  console.log(`The given number ${num} is the square root of ${num * num}`)
+}
+--- */
+
+// Conditional in a single line
+if (1 + 1 === 2) console.log('1+1 is 2')
+
+// if/else chain
+
+let score = 33
+
+if (score < 40) {
+  console.log('Work hard next year, this year you have not made it')
+} else if (score < 60) {
+  console.log('You have passed, and you can improve')
+} else if (score < 80) {
+  console.log('You have done fairly good, congratulations')
+} else {
+  console.log('You have excelled in exams, excellent')
+}

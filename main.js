@@ -105,3 +105,22 @@ while (counter <= 10) {
 }
 
 console.log(`2 to the power 10 is: ${n}`)
+
+console.log('JavaScript provides the exponential operator ** as well', 2 ** 10)
+
+// for loop, a compact alternative for while loop where all the statements related to the the state of the loop are grouped together after for
+
+console.log('for-loop')
+for (let c = 0; c <= 12; c += 2) {
+  console.log(c)
+}
+
+// 2 to the power 10 with for loop
+
+let result = 1
+
+for (let counter = 0; counter < 10; counter++) {
+  result = result * 2
+}
+
+console.log(result)

@@ -61,7 +61,7 @@ luigiesDebt = 140 - 35 // After luigie paid 35$ back, the binding now holds the 
 
 console.log(Math.max(2, 4, 1, 6, 8))
 
-// Conditional Statement: Not all statements are straight roads
+// CONTROL FLOW: Conditional Statement: Not all statements are straight roads
 /* ---
 let num = Number(prompt('Enter a number'))
 if (!Number.isNaN(num)) {
@@ -85,3 +85,23 @@ if (score < 40) {
 } else {
   console.log('You have excelled in exams, excellent')
 }
+
+// Looping control flow: When we run a piece of program multiple times, the control flow is called loop
+
+let count = 0
+while (count <= 12) {
+  console.log(count)
+  count += 2
+}
+
+// Question: Find the 2 to the power 10
+
+let n = 1,
+  counter = 1 // I need 10 iterations. Memory map is done. Let me implement
+
+while (counter <= 10) {
+  n = n * 2
+  counter += 1
+}
+
+console.log(`2 to the power 10 is: ${n}`)

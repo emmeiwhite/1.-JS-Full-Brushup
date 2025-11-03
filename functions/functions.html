@@ -119,6 +119,16 @@
     </p>
 
     <p>There is no special reason to have both arrow function and function expressions in JavaScript, except for a very minor difference (to be discussed later)</p>
+
+
+    <h2>Call Stack</h2>
+
+    <p>Functions call one another</p>
+    <p>When a function is called, the control is taken to the function's body being called, and when the functions returns, the control is taken back to the caller.</p>
+    <p>And a mechanism is required to monitor these calls, this is where <strong>Call Stack</strong> comes in. It stores the context of caller functions and called functions, so that the control flow is managed properly.</p>
+
+    <p>When a function is invoked, function is loaded on the top of stack, and when the function returns, the function is popped out of stack.<strong>However, this popped function helps call stack to return to the caller function.</strong></p>
+
     <script src="./functions.js"></script>
   </body>
 </html>

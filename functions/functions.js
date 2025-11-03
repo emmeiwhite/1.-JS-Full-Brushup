@@ -34,3 +34,15 @@ try {
 } catch (error) {
   console.log(error)
 }
+
+console.log('let the program continue')
+
+// Function: Using a parameter from the global scope, its own parameter will be accessed
+let n = 10 // global scope
+let halve = function (n) {
+  return n / 2
+}
+
+console.log(halve(100)) // 50;
+
+console.log(n) // 10;

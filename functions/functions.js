@@ -46,3 +46,37 @@ let halve = function (n) {
 console.log(halve(100)) // 50;
 
 console.log(n) // 10;
+
+// Lexical scope and visibility
+
+console.log('Lexical Scope & Closure')
+const hummus = function (factor) {
+  console.log(factor)
+  const ingredient = function (amount, unit, name) {
+    let ingredientAmount = amount * factor
+    if (ingredientAmount > 1) unit += 's'
+    console.log(`${ingredientAmount} ${unit} ${name}`)
+  }
+
+  ingredient(1, 'can', 'chickpeas')
+  ingredient(0.25, 'cup', 'tahini')
+  ingredient(0.25, 'cup', 'lemon juice')
+  ingredient(1, 'clove', 'garlic')
+  ingredient(2, 'tablespoon', 'olive oil')
+  ingredient(0.5, 'teaspoon', 'cumin')
+}
+
+hummus(5)
+
+// Function as value: A function binding usually simply acts as a name for a specific piece of the program.
+let launchMissle = function () {
+  missileSystem.launch('now')
+}
+
+let safeMode = true
+if (safeMode) {
+  // Just a regular binding: Reassigning the value for the function
+  launchMissle = function () {
+    /* do nothing */
+  }
+}

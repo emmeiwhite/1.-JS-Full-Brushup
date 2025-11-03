@@ -20,6 +20,59 @@
       <li>To isolate these sub-programs from each other</li>
     </ul>
 
+    <p>
+      Function is created with an expression which starts with the keyword
+      <em>function</em>
+      .
+    </p>
+
+    <p>
+      Functions have may a set of
+      <em>parameters</em>
+      , and a
+      <strong>body</strong>
+      -- which contains statements which are to be executed when the function is called.
+    </p>
+
+    <h2>Bindings and Scope</h2>
+    <p>
+      Each binding has a scope, which is the part of the program in which the
+      <em>binding is visible</em>
+    </p>
+
+    <p>
+      For bindings defined outside of any
+      <em>function</em>
+      ,
+      <em>block</em>
+      or a
+      <em>module</em>
+      , the whole program is the scope and such bindings can be referred from anywhere in the
+      program. Their
+      <strong>scope</strong>
+      is
+      <strong>global</strong>
+    </p>
+
+    <p>
+      Bindings created for function parameters, or declared inside the function can be referenced
+      only within function, so they are known as
+      <strong>local bindings</strong>
+      have local scope.
+    </p>
+
+    <p>Every time a function is called, new instances of bindings is created</p>
+
+    <h2>let and const bindings</h2>
+    <p>
+      Bindings created with
+      <strong>let</strong>
+      and
+      <strong>const</strong>
+      can only be accessed within the block they are declared in.
+    </p>
+
+    <p>In Pre-2015 JavaScript, only functions created new scope with var keyword.</p>
     <script src="./functions.js"></script>
   </body>
 </html>

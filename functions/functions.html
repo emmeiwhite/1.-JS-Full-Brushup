@@ -86,6 +86,28 @@
       <strong>lexical scope</strong>
       .
     </p>
+
+    <h2>Function declaration</h2>
+
+    <p>
+      When the
+      <strong>function</strong>
+      keyword is used at the start of the statement, it works differently.
+
+      <code><embed>
+        
+        function square(x){ 
+           return x*x 
+        }
+</code>embed></code>
+      This is a function declaration.
+    </p>
+    <p>
+      The function definitions are happily invoked even when used on the lines above their
+      declaration. Function declarations are not part of the normal top-to-bottom flow of control.
+      They are conceptually moved to the top of their scope and can be used by all the code in that
+      scope
+    </p>
     <script src="./functions.js"></script>
   </body>
 </html>

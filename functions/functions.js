@@ -80,3 +80,19 @@ if (safeMode) {
     /* do nothing */
   }
 }
+
+// Function Declarations
+
+function cube(x) {
+  return x * x * x
+}
+
+console.log(cube(3))
+
+console.log(`Future say: ${futurecars()}`)
+
+function futurecars() {
+  return 'The future is bright for the flying cars'
+}
+
+/** Here we notice that function definitions are happily invoked even when used on the lines above their declaration. Function declarations are not part of the normal top-to-bottom flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope */

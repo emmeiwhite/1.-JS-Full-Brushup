@@ -96,3 +96,15 @@ function futurecars() {
 }
 
 /** Here we notice that function definitions are happily invoked even when used on the lines above their declaration. Function declarations are not part of the normal top-to-bottom flow of control. They are conceptually moved to the top of their scope and can be used by all the code in that scope */
+
+/** Arrow Functions: Introduced in ES-2015 */
+
+const horn = () => {
+  console.log('Peep Peep! Dil Tord ke Hasti ho mera! Peep Peep')
+}
+
+horn()
+
+const mul = (a, b) => a * b
+
+console.log(mul(2, 4))

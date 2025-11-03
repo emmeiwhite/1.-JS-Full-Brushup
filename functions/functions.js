@@ -28,3 +28,9 @@ if (true) {
 }
 
 console.log(k) // k can be accessed anywhere in the program - Pre-2015 JS
+
+try {
+  console.log(z) // referenceError, z is not defined
+} catch (error) {
+  console.log(error)
+}

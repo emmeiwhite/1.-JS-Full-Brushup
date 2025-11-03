@@ -8,10 +8,11 @@ for (let i = 0; i < 7; i++) {
     result += '# '
   }
 
-  console.log(result)
+  addPara(result)
+}
 
+function addPara(result) {
   const para = document.createElement('p')
   para.textContent = result
-
   patternDiv.append(para)
 }

@@ -108,3 +108,22 @@ horn()
 const mul = (a, b) => a * b
 
 console.log(mul(2, 4))
+
+/** --- Optional Parameters | Too many or too few arguments. Too many arguments are ignored and too few are assigned undefined--- */
+
+console.log('Optional Parameters: Too few or too many')
+function minus(a, b) {
+  if (b === undefined) return -a
+  return a - b
+}
+
+console.log(minus(10))
+console.log(minus(50, 10))
+
+function square2(x) {
+  return x * x
+}
+
+// caller: Here the extra arguments are smartly ignored by JavaScript
+const sqrOf4 = square2(4, true, 'Shine & Rise!')
+console.log(sqrOf4)

@@ -127,3 +127,20 @@ function square2(x) {
 // caller: Here the extra arguments are smartly ignored by JavaScript
 const sqrOf4 = square2(4, true, 'Shine & Rise!')
 console.log(sqrOf4)
+
+// CLOSURE: What happens to the local bindings when the function that called them is no londer active? Or it has finished its execution?
+
+console.log('The closure in action')
+function wrapValue(n) {
+  let local = n
+  return () => local
+}
+
+const wrap1 = wrapValue(5)
+console.log(wrap1()) // Note that local bindings gets re-created everytime that they are called
+
+const wrap2 = wrapValue(45)
+console.log(wrap2())
+
+const wrap3 = wrapValue('We are here')
+console.log(wrap3())

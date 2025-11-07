@@ -144,3 +144,51 @@ console.log(wrap2())
 
 const wrap3 = wrapValue('We are here')
 console.log(wrap3())
+
+// We can create functions in a creative way: For example that multiplies by a certain value
+function multiplier(factor) {
+  return num => factor * num
+}
+
+const twiceFxn = multiplier(2)
+
+twiceFxn(5)
+twiceFxn(30)
+
+/** --- CLOSURE - Revisit --- */
+
+// Function is code + remembered enviroment
+
+function addByNumber(n) {
+  return x => n + x
+}
+
+const addBy10 = addByNumber(10)
+console.log('Add by 10')
+console.log(addBy10(40))
+
+console.log('The Farm Problem')
+/* --- Exercise:
+“Write a function that takes two numbers — cows and chickens —
+and prints them with labels (‘Cows’ and ‘Chickens’) so that the numbers always show as three digits (with leading zeros if needed).” --- */
+
+function farmAnimalsCount(cows, chickens) {
+  let countCows = String(cows)
+
+  while (countCows.length < 3) {
+    countCows = '0' + countCows
+  }
+
+  let countChickens = String(chickens)
+  while (countChickens.length < 3) {
+    countChickens = '0' + countChickens
+  }
+
+  return { cows: countCows + ' Cows', chickens: countChickens + ' Chickens' }
+}
+
+const { cows, chickens } = farmAnimalsCount(9, 18)
+
+console.log(cows)
+
+console.log(chickens)

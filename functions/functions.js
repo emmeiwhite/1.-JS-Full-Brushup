@@ -280,3 +280,14 @@ Easy to swap out, test individually, or reuse across projects.
 
 This is the same mindset behind Express middleware and React hooks.
  */
+
+function min(num1, num2) {
+  if (num1 < num2) {
+    return num1
+  } else {
+    return num2
+  }
+}
+
+console.log(`Min of 6 and 2 is : ${min(6, 2)}`)
+console.log(`Min of 34 and 89 is : ${min(34, 89)}`)

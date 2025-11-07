@@ -202,10 +202,13 @@ function zeroPad(number, width) {
   return stringVal
 }
 
-function animalFarmProblem(cows, chickens) {
+function printFarmInventory(cows, chickens, ducks) {
   const totalCows = zeroPad(cows, 3)
   const totalChickens = zeroPad(chickens, 3)
-
+  const totalDucks = zeroPad(ducks, 3)
   console.log(totalCows + ' Cows')
   console.log(totalChickens + ' Chickens')
+  console.log(totalDucks + ' Ducks')
 }
+
+printFarmInventory(2, 20, 6)

@@ -212,3 +212,30 @@ function printFarmInventory(cows, chickens, ducks) {
 }
 
 printFarmInventory(2, 20, 6)
+
+/** One Function should perform one task, having only one responsibility because it scales up easily */
+
+// Let's take a good example:
+
+function processOrder(order) {
+  // 1.validate
+  if (!order.id || !order.amount) throw new Error('Invalid Order')
+
+  /** 2. Business Logic */
+  // 2a) Apply discount
+  if (order.amount > 1000) return order.amount * 0.9
+
+  // 2b) Convert Currency
+  order.amount = order.amount * 84 // USD --> INR
+
+  /** 3. Save to DB */
+  console.log('Saving to Database ...', order)
+}
+
+/** 
+ * 😩 Problem:
+
+Hard to test or reuse just one part.
+
+Validation logic, business logic, and I/O are mixed
+ */

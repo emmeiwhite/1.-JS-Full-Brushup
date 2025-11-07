@@ -239,3 +239,44 @@ Hard to test or reuse just one part.
 
 Validation logic, business logic, and I/O are mixed
  */
+
+/** ✅ Better — Split by Concern (Each Function Does One Thing) */
+
+function validateOrder(order) {
+  if (!order.id || !order.amount) throw new Error('Invalid Order')
+  return order
+}
+
+function paymentDiscount(order) {
+  if (order.amount > 1000) order.amount * 0.9
+  return order
+}
+
+function convertToINR(order) {
+  order.amount = order.amount * 84 // USD ---> INR
+}
+
+function saveToDB(order) {
+  console.log('Saving to Database :', order)
+}
+
+function processOrder(order) {
+  const processed = [validateOrder, paymentDiscount, convertToINR].reduce(
+    (acc, fn) => fn(order),
+    order
+  )
+
+  saveToDB(processed)
+}
+
+/**
+ * 🧠 Here’s what’s happening:
+
+Each function handles one single task.
+
+The “pipeline” pattern (reduce with functions) composes them into a flow.
+
+Easy to swap out, test individually, or reuse across projects.
+
+This is the same mindset behind Express middleware and React hooks.
+ */

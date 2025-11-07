@@ -192,3 +192,20 @@ const { cows, chickens } = farmAnimalsCount(9, 18)
 console.log(cows)
 
 console.log(chickens)
+
+// Now, taking out the repeated code and using a function instead.
+function zeroPad(number, width) {
+  let stringVal = String(number)
+  while (stringVal.length < width) {
+    stringVal = '0' + stringVal
+  }
+  return stringVal
+}
+
+function animalFarmProblem(cows, chickens) {
+  const totalCows = zeroPad(cows, 3)
+  const totalChickens = zeroPad(chickens, 3)
+
+  console.log(totalCows + ' Cows')
+  console.log(totalChickens + ' Chickens')
+}

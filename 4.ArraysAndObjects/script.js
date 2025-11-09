@@ -73,3 +73,16 @@ console.log(anObject.left) // undefined
 
 console.log('left' in anObject) // false since property 'left' no longer exist on the object
 console.log('right' in anObject) // true, as right still is part of anObject, the tentacle is intact
+
+// Object.keys(): To find out what properties an object has, we can use the Object.keys() function
+
+let point = { x: 34, y: -23 }
+const cords = Object.keys(point) // Returns an array of properties ['x','y']
+console.log(cords)
+
+const point2 = Object.assign(point)
+console.log(point2)
+
+point.x = 13
+console.log(point)
+console.log(point2)

@@ -33,3 +33,32 @@ console.log(sequence)
 
 console.log(sequence.pop())
 console.log(sequence)
+
+/** Objects: Grouping values or collection of properties */
+console.log('Objects: As collection of properties')
+const day1 = {
+  hasTurnedToSquirrel: false,
+  activities: ['work', 'run', 'eat pizza', 'touched tree']
+}
+
+console.log(day1.hasTurnedToSquirrel)
+console.log(day1.isWolf) // undefined (Very important)
+day1.isWolf = false
+console.log(day1.isWolf)
+
+// Example-2: Objects: Properties whose names aren't valid  value names or valid numbers are kept in quotes
+
+let descriptions = {
+  work: 'Went to work',
+  'touched tree': 'Touched the tree'
+}
+
+// Returning object with short-hand arrow function
+
+const getObj = n => {
+  return {
+    prop: n
+  }
+}
+
+console.log(getObj(5))

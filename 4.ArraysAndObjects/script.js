@@ -141,3 +141,33 @@ function remove(array, index) {
 }
 
 remove(['a', 'b', 'c', 'd', 'e'], 2) // → ["a", "b", "d", "e"]
+
+// Strings and their properties
+let kim = 'Kim'
+kim.age = 88 // Though the langauge allows but it doesn't store anything, since booleans, strings and numbers are immutable
+console.log(kim.age) // undefined
+
+// Some common string methods which are very useful are slice() and indexOf()
+console.log('coconuts'.slice(4, 7)) // → nut We get part of string
+console.log('coconut'.indexOf('u')) // → 5
+
+// trim method on string
+
+console.log('   okay \n'.trim().length) // 4
+
+console.log(String(6).padStart(3, '0')) // 006
+
+// split and join
+let sentence = 'Secretarybirds specialize in stomping'
+let words = sentence.split(' ')
+console.log(words)
+// → ["Secretarybirds", "specialize", "in", "stomping"]
+
+console.log(words.join('. '))
+// → Secretarybirds. specialize. in. stomping
+
+console.log('LA'.repeat(3)) // → LALALA
+
+let string = 'abc'
+console.log(string.length) // → 3 console.log(string[1]);
+// → b

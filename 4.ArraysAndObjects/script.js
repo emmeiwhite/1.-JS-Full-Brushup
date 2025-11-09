@@ -17,3 +17,19 @@ const person = {
 
 console.log(person.firstName)
 console.log(person['Last Name'])
+
+/** --- Methods : Both string and array values contain a number of properties that hold function values --- */
+let doh = 'Doh'
+console.log(typeof doh.toUpperCase) // Note we are not calling the property toUpperCase here
+// -> function
+
+console.log(doh.toUpperCase())
+// -> string
+
+let sequence = [2, 3, 5]
+sequence.push(7)
+sequence.push(9)
+console.log(sequence)
+
+console.log(sequence.pop())
+console.log(sequence)

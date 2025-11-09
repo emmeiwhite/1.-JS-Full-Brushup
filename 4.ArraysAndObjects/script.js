@@ -108,4 +108,36 @@ const score = { visitors: 0, home: 0 }
 
 score.visitors = 1 // this is allowed
 
+/* 
 score = { visitors: 1, home: 0 } // this is not allowed
+*/
+
+// The journal of Jaques
+
+const journal = []
+
+function addEntry(events, squirrel) {
+  journal.push({ events, squirrel })
+}
+
+addEntry(['work', 'touched tree', 'pizza', 'running', 'television'], false)
+addEntry(['work', 'ice cream', 'cauliflower', 'lasagna', 'touched tree', 'brushed teeth'], false)
+addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
+
+// Loops: for, for-of:You use for...of when you only care about values in something iterable — like arrays, strings, maps, or sets — and don’t care about the index.
+
+for (let entry of journal) {
+  console.log(entry)
+}
+
+// Some array methods: shift, unshift, indexOf, slice,concat,
+
+const elements = [6, 9, 12, 15, 18, 21, 24, 27]
+const slicedElements = elements.slice(2, 5)
+console.log(slicedElements)
+
+function remove(array, index) {
+  return array.slice(0, index) + array.concat(index + 1)
+}
+
+remove(['a', 'b', 'c', 'd', 'e'], 2) // → ["a", "b", "d", "e"]

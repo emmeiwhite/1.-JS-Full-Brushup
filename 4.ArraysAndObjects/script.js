@@ -62,3 +62,14 @@ const getObj = n => {
 }
 
 console.log(getObj(5))
+
+// delete operator: If an object is considered as a octopus with any number of tentacles each of which has a name written on it, then delete operator cuts-off the tentacle from such as octobus.
+
+let anObject = { left: 1, right: 2 }
+console.log(anObject.left) // 1
+console.log(delete anObject.left)
+
+console.log(anObject.left) // undefined
+
+console.log('left' in anObject) // false since property 'left' no longer exist on the object
+console.log('right' in anObject) // true, as right still is part of anObject, the tentacle is intact

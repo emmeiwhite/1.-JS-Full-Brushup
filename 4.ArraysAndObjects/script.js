@@ -86,3 +86,26 @@ console.log(point2)
 point.x = 13
 console.log(point)
 console.log(point2)
+
+// Mutability:
+
+let object1 = { value: 10 }
+let object2 = object1
+let object3 = { value: 10 }
+
+console.log(object1 === object2) // true, both object1 and object2 are basically pointing to the same reference
+
+console.log(object3 === object1) // false, totally 2 different references
+
+object1.value = 12
+console.log(object2.value) // 12 (since both objects are pointing to the same object)
+
+console.log(object3.value) // 10, standalone object
+
+// const binding itself cannot be changed but the contents can be modified
+
+const score = { visitors: 0, home: 0 }
+
+score.visitors = 1 // this is allowed
+
+score = { visitors: 1, home: 0 } // this is not allowed

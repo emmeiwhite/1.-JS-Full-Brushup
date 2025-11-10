@@ -61,3 +61,19 @@ console.log(jsonDataForWeb)
 const jsonDataReceived = JSON.parse(jsonDataForWeb)
 
 console.log(jsonDataReceived)
+
+// This is allowed in JavaScript for var and function declaration
+function foo() {
+  console.log('Move forward and think about your goals')
+}
+
+function foo() {
+  console.log('We are here')
+}
+
+foo()
+
+// Random numbers between 0 and 15
+
+const randomNumber = Math.floor(Math.random() * 15)
+console.log(randomNumber)

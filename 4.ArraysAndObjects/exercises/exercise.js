@@ -10,3 +10,19 @@ function range(start, end) {
 }
 
 console.log(range(2, 9))
+
+// 2. Sum of range(). sum(range(start, end))
+
+function sum(arr) {
+  let sumAcc = 0
+  // Iterate through the array values
+  for (let i = 0; i < arr.length; i++) {
+    sumAcc = sumAcc + arr[i]
+  }
+
+  return sumAcc
+}
+
+console.log('The sum range problems:')
+console.log(sum(range(1, 10)))
+console.log(sum(range(9, 10)))

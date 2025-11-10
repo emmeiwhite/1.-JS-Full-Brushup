@@ -30,3 +30,10 @@ function sum(arr) {
 }
 
 console.log(sum(range(1, 10)))
+
+// Abstracting Repetition: Plain functions are a good way to build abstractions.
+// It is common for a program to do something for a given number of times. And we can use for loop for that like this:
+
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+}

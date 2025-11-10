@@ -77,3 +77,17 @@ foo()
 
 const randomNumber = Math.floor(Math.random() * 15)
 console.log(randomNumber)
+
+// Object De-Structuring
+
+let { age } = { name: 'Faraji', age: 23 }
+
+console.log(age)
+
+// Optional Property Access
+function city(object) {
+  return object.address.city
+}
+
+console.log(city({ addres: { city: 'Manhattan' } }))
+console.log(city({ name: 'Vera' })) // No address provided here. Here we'll get undefinedx

@@ -90,4 +90,4 @@ function city(object) {
 }
 
 console.log(city({ addres: { city: 'Manhattan' } }))
-console.log(city({ name: 'Vera' })) // No address provided here. Here we'll get undefinedx
+console.log(city({ name: 'Vera' })) // No address provided here. Here we'll get undefined

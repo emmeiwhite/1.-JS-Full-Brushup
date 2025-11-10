@@ -13,3 +13,13 @@ function max(...numbers) {
 }
 
 console.log(max(87, 21, -66, 48, 95, -10))
+
+// 2. Spread Operator
+
+const numbers = [5, 1, 7]
+
+console.log(max(...numbers))
+
+// It is possible to include an array like that along with other arguments
+
+max(9, ...numbers, 2) // max(9,5,1,7,2) ->9

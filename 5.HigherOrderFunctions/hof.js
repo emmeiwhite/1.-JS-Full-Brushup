@@ -68,3 +68,13 @@ function action(num) {
   --- */
 
 repeat(3, console.log)
+
+let labels = []
+
+repeat(5, i => {
+  labels.push(`Unit ${i}`)
+})
+
+console.log(labels)
+
+// We can notice a pattern. For each array element iteration, we are literally executing the function (action)

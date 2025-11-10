@@ -86,7 +86,7 @@ console.log(age)
 
 // Optional Property Access
 function city(object) {
-  return object.address.city
+  return object?.address?.city
 }
 
 console.log(city({ addres: { city: 'Manhattan' } }))

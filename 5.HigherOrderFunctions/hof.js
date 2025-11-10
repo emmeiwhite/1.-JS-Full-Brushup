@@ -61,8 +61,10 @@ function repeat(n, action) {
   }
 }
 
+/* ---
 function action(num) {
   console.log(num)
 }
+  --- */
 
-repeat(3, action)
+repeat(3, console.log)

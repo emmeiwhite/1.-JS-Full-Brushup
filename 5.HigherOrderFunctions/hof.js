@@ -48,4 +48,21 @@ function repeatLog(n) {
 
 repeatLog(5)
 
-//
+// But what if we want to do something other than logging the numbers?
+// Since "doing something" can be represented by a function
+// And 'functions are just values' and we can pass our action (doing something function) as a "function value"
+
+/** In simple words for mental model: Repeat an action(a function does this action) n times */
+
+console.log('************* Abstrations - Mental Model for Real Programming **************')
+function repeat(n, action) {
+  for (let i = 0; i < n; i++) {
+    action(i)
+  }
+}
+
+function action(num) {
+  console.log(num)
+}
+
+repeat(3, action)

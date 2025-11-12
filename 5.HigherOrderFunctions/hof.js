@@ -107,3 +107,19 @@ console.log(triple(5)) // 15
 //Think of it like this:
 
 // A function can either do work right now or return a tool that knows how to do work later.
+
+function noisy(f) {
+  return (...args) => {
+    console.log('Calling with', args)
+    let result = f(...args)
+  }
+}
+
+// forEach
+
+console.log('The inbuild HOF forEach')
+
+const arrayElems = ['A', 'B', 'C']
+arrayElems.forEach(elem => {
+  console.log(elem)
+})

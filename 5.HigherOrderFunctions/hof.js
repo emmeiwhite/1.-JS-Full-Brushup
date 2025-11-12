@@ -78,3 +78,32 @@ repeat(5, i => {
 console.log(labels)
 
 // We can notice a pattern. For each array element iteration, we are literally executing the function (action)
+
+/** --- Let me practice some patterns where a function is passed as an action - doing something. Passing functions as values --- */
+
+// 1. Create new function from other function, when we return the function
+function getTaller(heightToBeAdded) {
+  return oldHeight => {
+    return oldHeight + heightToBeAdded
+  }
+}
+
+const newHeightFxn = getTaller(2)
+
+const newHeight = newHeightFxn(8)
+console.log(newHeight)
+
+// 2. Make multiplier
+
+function makeMultiplier(multiplier) {
+  return num => num * multiplier
+}
+
+const double = makeMultiplier(2)
+const triple = makeMultiplier(3)
+console.log(double(5)) // 10
+console.log(triple(5)) // 15
+
+//Think of it like this:
+
+// A function can either do work right now or return a tool that knows how to do work later.

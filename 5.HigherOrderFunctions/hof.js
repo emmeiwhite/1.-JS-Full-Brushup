@@ -174,3 +174,10 @@ const livingScripts = SCRIPTS.filter(script => {
 
 console.log('The living scripts are: ')
 console.log(livingScripts)
+
+/** --- Transforming with map --- */
+
+const arr = [2, 4, 6, 8, 10] // HOF's process data
+
+const newArray = arr.map(elem => elem * 3)
+console.log(newArray)
